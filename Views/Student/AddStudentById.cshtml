@@ -1,0 +1,68 @@
+﻿@model StudentMgtMVC.Models.Student
+
+@{
+    ViewData["Title"] = "Add Student";
+}
+
+<h1>Add Student</h1>
+
+<form method="post" asp-controller="Student" asp-action="AddStudentById">
+    <div>
+        <div class="row">
+            <div class="col-8">
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="StudentFirstName"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="StudentFirstName" class="form-control" />
+                        <span asp-validation-for="StudentFirstName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="StudentLastName"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="StudentLastName" class="form-control" />
+                        <span asp-validation-for="StudentLastName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="StudentCourse"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="StudentCourse" class="form-control" />
+                        <span asp-validation-for="StudentCourse" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @*<div class="col-6 offset-4 row">*@
+                    <div class="col-4 offset-4">
+                        <input type="submit" class="btn btn-info w-100" value="Add" />
+                    </div>
+
+                    @if (ViewBag.Message != null)
+                    {
+                        <a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; 
+                         margin: 10px; background-color: #87CEEB; float: right" asp-controller="Admin" 
+                         asp-action="GetAllStudents">Get Student Details</a>
+
+                        <script type="text/javascript">
+                            window.onload = function () {
+                                alert("@ViewBag.Message");
+                            };
+                        </script>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+

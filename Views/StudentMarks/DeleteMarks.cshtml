@@ -1,0 +1,21 @@
+﻿@model StudentMgtMVC.Models.StudentMarks
+
+
+@{
+    ViewData["Title"] = "Delete Marks";
+}
+
+<h1>Delete Marks</h1>
+
+@if (ViewBag.Message != null)
+{
+    <a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative;
+     margin: 10px; background-color: #87CEEB; float: right" asp-controller="StudentMarks" 
+       asp-action="GetAllStudentMarks">Get Student Marks</a>
+
+    <script type="text/javascript">
+        window.onload = function () {
+        alert("@ViewBag.Message");
+        };
+    </script>
+}

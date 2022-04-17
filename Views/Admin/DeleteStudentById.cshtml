@@ -1,0 +1,21 @@
+﻿@model StudentMgtMVC.Models.Student
+
+@{
+    ViewData["Title"] = "Delete Student";
+}
+
+<h1>Deleted Successfully</h1>
+
+@if (ViewBag.Message != null)
+{
+    <a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; 
+     margin: 10px; background-color: #87CEEB; float: right" asp-controller="Admin" asp-action="GetAllStudents">Get Student Details</a>
+    
+    <script type="text/javascript">
+        window.onload = function () {
+        alert("@ViewBag.Message");
+        };
+    </script>
+}
+
+

@@ -1,0 +1,49 @@
+﻿@model StudentMgtMVC.Models.Student
+
+@{
+    ViewData["Title"] = "Search Student";
+}
+
+<h1>Search Student</h1>
+
+@*<form method="post" asp-controller="Student" asp-action="SearchStudentById">
+        <div>
+            <div class="row">
+                <div class="col-8">
+
+                    <div class="form-group row">
+                        <div class="col-4">
+                            <label asp-for="StudentID"></label>
+                        </div>
+                        <div class="col-8">
+                            <input asp-for="StudentID" class="form-control" />
+                            <span asp-validation-for="StudentID" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; margin: 10px; background-color: #87CEEB;float: right" asp-controller="Student" asp-action="SearchStudentById">Search Student</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>*@
+
+@*@if (Model.Count() == 0) { 
+<tr> 
+    <td colspan = "3"> Records not found </td>
+</tr >
+} 
+else {
+
+    @foreach(var item in Model) 
+    { 
+    <tr> 
+    <td> @Html.DisplayFor(modelItem => @item.StudentID) </td>
+    <td>
+
+        @Html.DisplayFor(modelItem => @item.StudentFirstName)
+    </td> 
+    <td> @Html.DisplayFor(modelItem => @item.StudentLastName) </td>
+    </tr>
+    }
+}*@
