@@ -20,8 +20,8 @@ namespace StudentMgtMVC.Infrastructure
         public SendServiceBusMessage(IConfiguration configuration, ILogger<SendServiceBusMessage> logger)
         {
             _Logger = logger;
-            var _serviceBusConnectionString = configuration["ServicebUsConnectionString"];
-            string queueName = _configuration["QueueName"];
+            var _serviceBusConnectionString = configuration["ServiceBusConnectionString"];
+            string queueName = configuration["QueueName"];
             _client = new ServiceBusClient(_serviceBusConnectionString);
             _clientSender = _client.CreateSender(queueName);
         }

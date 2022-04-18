@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Azure.Storage.Blobs;
 using Microsoft.Extensions.Logging;
 using StudentMgtMVC.Infrastructure;
 using StudentMgtMVC.Models;
 using System;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace StudentMgtMVC.Controllers
 {
@@ -22,7 +24,7 @@ namespace StudentMgtMVC.Controllers
             _appContext = appContext;
         }
 
-        public IActionResult Admin()    // Index : Admin
+        public IActionResult Admin()
         {
             return View();
         }
@@ -62,6 +64,7 @@ namespace StudentMgtMVC.Controllers
                 return View(student);
             }
         }
+
 
         //[HttpPost]
         //public IActionResult DeleteStudent(int Id)
@@ -187,7 +190,6 @@ namespace StudentMgtMVC.Controllers
         }*/
 
 
-
         //[HttpPost]
         //public ActionResult ImageUpload()
         //{
@@ -207,6 +209,32 @@ namespace StudentMgtMVC.Controllers
         //    return View();
         //}
 
+        //[HttpPost]
+        //public ActionResult BlobUpload()
+        //{
+
+        //    return View();
+        //}
+
+        //public async Task UploadBlobFile()
+        //{
+        //    string connectionString = Environment.GetEnvironmentVariable("AZURE_STORAGE_CONNECTION_STRING");
+        //    BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
+        //    string containerName = "myblobs" + Guid.NewGuid().ToString();
+        //    BlobContainerClient blobContainerClient = await blobServiceClient.CreateBlobContainerAsync(containerName);
+
+        //    string localPath = @"D:\Azure\BlobQuickstart\data";
+        //    string fileName = "quickstart" + Guid.NewGuid().ToString() + ".txt";
+        //    string localFilePath = Path.Combine(localPath, fileName);
+        //    await File.WriteAllTextAsync(localFilePath, "Hello, World!");
+
+        //    BlobClient blobClient = blobContainerClient.GetBlobClient(fileName);
+        //    await blobClient.UploadAsync(localFilePath, true);
+
+        //    Console.WriteLine("Uploading to Blob storage as blob:\n\t {0}\n", blobClient.Uri);
+        //    // Upload data from the local file
+        //    await blobClient.UploadAsync(localFilePath, true);
+        //}
 
     }
 }
