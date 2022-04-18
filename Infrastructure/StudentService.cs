@@ -48,7 +48,6 @@ namespace StudentMgtMVC.Infrastructure
                 throw ex;
             }
 
-
             return stud;
         }
 

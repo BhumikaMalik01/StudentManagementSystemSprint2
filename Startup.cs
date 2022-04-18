@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StudentMgtMVC.Infrastructure;
+using StudentMgtMVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,8 @@ namespace StudentMgtMVC
             services.AddDbContext<ApplicationContext>(x => x.UseSqlServer(Configuration.GetConnectionString("ConStr")));
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<IStudentMarksService, StudentMarksService>();
+            services.AddScoped<SendServiceBusMessage>();
+            services.AddScoped<ServiceBusMessageData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
