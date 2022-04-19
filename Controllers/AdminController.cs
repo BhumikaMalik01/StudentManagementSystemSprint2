@@ -6,6 +6,10 @@ using StudentMgtMVC.Models;
 using System;
 using System.Threading.Tasks;
 using System.IO;
+using System.Web.Mvc;
+using System.Web;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace StudentMgtMVC.Controllers
 {
@@ -167,28 +171,66 @@ namespace StudentMgtMVC.Controllers
             return model;
         }
 
-        /*public IActionResult DeleteMarksByStuId(int stuid)
+        //public async Task<string> UploadImageAsync(HttpPostedFileBase imageToUpload)
+        //{
+        //    string imageFullPath = null;
+        //    if (imageToUpload == null || imageToUpload.ContentLength == 0)
+        //    {
+        //        return null;
+        //    }
+        //    try
+        //    {
+        //        CloudStorageAccount cloudStorageAccount = ConnectionString.GetConnectionString();
+        //        CloudBlobClient cloudBlobClient = cloudStorageAccount.CreateCloudBlobClient();
+        //        CloudBlobContainer cloudBlobContainer = cloudBlobClient.GetContainerReference("sampleimage");
+
+        //        if (await cloudBlobContainer.CreateIfNotExistsAsync())
+        //        {
+        //            await cloudBlobContainer.SetPermissionsAsync(
+        //                new BlobContainerPermissions
+        //                {
+        //                    PublicAccess = BlobContainerPublicAccessType.Blob
+        //                }
+        //                );
+        //        }
+        //        string imageName = Guid.NewGuid().ToString() + "-" + Path.GetExtension(imageToUpload.FileName);
+
+        //        CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(imageName);
+        //        cloudBlockBlob.Properties.ContentType = imageToUpload.ContentType;
+        //        await cloudBlockBlob.UploadFromStreamAsync(imageToUpload.InputStream);
+
+        //        imageFullPath = cloudBlockBlob.Uri.ToString();
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //    }
+        //    return imageFullPath;
+        //}
+
+        //public ActionResult Upload()
+        //{
+        //    return View();
+        //}
+
+        //[HttpPost]
+        //public async Task<ActionResult> Upload(HttpPostedFileBase photo)
+        //{
+        //    var imageUrl = await UploadImageAsync(photo);
+        //    TempData["LatestImage"] = imageUrl.ToString();
+        //    return RedirectToAction("LatestImage");
+        //}
+
+        public ActionResult LatestImage()
         {
-            _Logger.LogInformation("student endpoint starts");
-
-            try
+            var latestImage = string.Empty;
+            if (TempData["LatestImage"] != null)
             {
-
-                var responseModel = _stuService.DeleteStudentMarks(stuid);
-                if (responseModel == null) return NotFound();
-                _Logger.LogInformation("student endpoint completed");
-
-                return Ok(responseModel);
+                ViewBag.LatestImage = Convert.ToString(TempData["LatestImage"]);
             }
-            catch (Exception ex)
-            {
-                _Logger.LogError("exception occured;ExceptionDetail:" + ex.Message);
-                _Logger.LogError("exception occured;ExceptionDetail:" + ex.InnerException);
-                _Logger.LogError("exception occured;ExceptionDetail:" + ex);
-                return BadRequest();
-            }
-        }*/
 
+            return View();
+        }
 
         //[HttpPost]
         //public ActionResult ImageUpload()
@@ -235,6 +277,5 @@ namespace StudentMgtMVC.Controllers
         //    // Upload data from the local file
         //    await blobClient.UploadAsync(localFilePath, true);
         //}
-
     }
 }

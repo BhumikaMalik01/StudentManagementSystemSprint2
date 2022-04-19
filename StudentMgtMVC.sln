@@ -9,6 +9,8 @@ Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "SMS.ServiceBus.Queue", "..\
 EndProject
 Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "SMS.Workflow.SendEmailAlert", "..\SMS.Workflow.SendEmail\SMS.Workflow.SendEmailAlert.deployproj", "{91438026-A338-4579-BF59-E73A9460EFF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.ValidateLogin", "..\SMS.ValidateLogin\SMS.ValidateLogin.csproj", "{346B93CD-C377-4A75-885B-9B9D7873695D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{91438026-A338-4579-BF59-E73A9460EFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91438026-A338-4579-BF59-E73A9460EFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91438026-A338-4579-BF59-E73A9460EFF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{346B93CD-C377-4A75-885B-9B9D7873695D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{346B93CD-C377-4A75-885B-9B9D7873695D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{346B93CD-C377-4A75-885B-9B9D7873695D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{346B93CD-C377-4A75-885B-9B9D7873695D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
