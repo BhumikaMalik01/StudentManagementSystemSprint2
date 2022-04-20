@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "UploadFile";
+}
+
+<h1>UploadFile</h1>
+
+@using (Html.BeginForm("UploadFileAsync1", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <fieldset class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Photo">File</label>
+            <div class="col-md-10">
+                <input type="file" name="photo" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-primary mx-1" />
+            </div>
+
+        </div>
+        <div class="col">
+            @if (ViewBag.Message != null)
+            {
+                <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+                </script>
+                <a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; margin: 10px; background-color: #ff8d00;float: right" asp-controller="Admin" asp-action="GetAllStudents">Got To Students</a>
+            }
+        </div>
+    </fieldset>
+}

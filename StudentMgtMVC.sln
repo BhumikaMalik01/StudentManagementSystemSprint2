@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentMgtMVC", "StudentMgt
 EndProject
 Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "SMS.ServiceBus.Queue", "..\SMS.ServiceBus.Queue\SMS.ServiceBus.Queue.deployproj", "{EC7BE468-FC84-4B93-86D8-C84593F46254}"
 EndProject
-Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "SMS.Workflow.SendEmailAlert", "..\SMS.Workflow.SendEmail\SMS.Workflow.SendEmailAlert.deployproj", "{91438026-A338-4579-BF59-E73A9460EFF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.ValidateLogin", "..\SMS.ValidateLogin\SMS.ValidateLogin.csproj", "{346B93CD-C377-4A75-885B-9B9D7873695D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.ValidateLogin", "..\SMS.ValidateLogin\SMS.ValidateLogin.csproj", "{346B93CD-C377-4A75-885B-9B9D7873695D}"
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "SMS.Workflow.SendEmailAlert", "..\SMS.Workflow.SendEmailAlert\SMS.Workflow.SendEmailAlert.deployproj", "{A4634439-8EEE-497E-A41B-8CD6371BB85C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{EC7BE468-FC84-4B93-86D8-C84593F46254}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC7BE468-FC84-4B93-86D8-C84593F46254}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC7BE468-FC84-4B93-86D8-C84593F46254}.Release|Any CPU.Build.0 = Release|Any CPU
-		{91438026-A338-4579-BF59-E73A9460EFF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91438026-A338-4579-BF59-E73A9460EFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{91438026-A338-4579-BF59-E73A9460EFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{91438026-A338-4579-BF59-E73A9460EFF9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{346B93CD-C377-4A75-885B-9B9D7873695D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{346B93CD-C377-4A75-885B-9B9D7873695D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{346B93CD-C377-4A75-885B-9B9D7873695D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{346B93CD-C377-4A75-885B-9B9D7873695D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4634439-8EEE-497E-A41B-8CD6371BB85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4634439-8EEE-497E-A41B-8CD6371BB85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4634439-8EEE-497E-A41B-8CD6371BB85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4634439-8EEE-497E-A41B-8CD6371BB85C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

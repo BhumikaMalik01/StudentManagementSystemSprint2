@@ -66,7 +66,7 @@ namespace StudentMgtMVC.Controllers
                 _Logger.LogError("exception occured;ExceptionDetail:" + ex.InnerException);
                 _Logger.LogError("exception occured;ExceptionDetail:" + ex);
             }
-            ViewBag.Message = string.Format("Student Marks Added Successfully");     // <-
+            ViewBag.Message = string.Format("Student Marks Added Successfully"); 
             return View();
         }
 

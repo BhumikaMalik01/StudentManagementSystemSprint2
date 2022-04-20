@@ -80,13 +80,6 @@ namespace StudentMgtMVC.Controllers
             return View();
         }
 
-        //[HttpGet(nameof(SearchStudentById))]
-        ////[Route("[action]/stuid")]
-        public ActionResult SearchStudentById()
-        {
-            return View();
-        }
-
         [HttpGet(nameof(SearchStudentById))]
         [Route("[action]/stuid")]
         public ActionResult SearchStudentById(int stuid)
